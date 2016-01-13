@@ -1,0 +1,60 @@
+
+/**
+ * Main Style Sheet
+ * Shifra Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+@font-face {
+	font-family: 'Open Sans Hebrew';
+	font-style: bold;
+	font-weight: 700;
+	src: url(../images/fonts/opensanshebrew-bold-webfont.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Open Sans Hebrew';
+	font-style: regular;
+	font-weight: 400;
+	src: url(../images/fonts/opensanshebrew-regular-webfont.woff) format('woff');
+}
+
+@bg_color: #f5f5f5;
+@color_ac_blue: #b8e3e8;
+@color_ac_light_grey: #d6d6d6;
+@color_ac_dark_grey: #5c5c5c;
+@color_ac_white: white;
+
+ @vertical_spacing: 50px;
+ @vertical_spacing_small: 20px;
+
+ @import "header.less";
+
+ @import (css) "stock/header.css";
+ @import (css) "stock/copyright.css";
+
+
+ body {
+ 	background-color: @bg_color;
+ 	color: @color_ac_dark_grey;
+ 	font-family: 'Open Sans Hebrew', sans-serif;
+ }
+
+ input,
+ select,
+ textarea,
+ button {
+ 	font-family: 'Open Sans Hebrew';
+ 	font-weight: 400;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5 {
+ 	font-family: 'Open Sans Hebrew';
+ 	font-weight: 700;
+ }

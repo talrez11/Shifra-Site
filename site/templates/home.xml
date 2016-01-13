@@ -9,7 +9,48 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<header>
+				<a
+					href="'tel:'.urlencode(Language::getText('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<cms:text constant="phone"/>
+					<img 
+						src="_BASEURL.'/site/images/icon-phone.svg'" 
+						alt="logo"
+						cms:eval="src"
+						/>
+				</a>
+
+				<nav>
+					<a href="#">
+						<cms:text constant="menu_advertise"/>
+					</a>
+
+					<a href="#">
+						<cms:text constant="menu_strip"/>
+					</a>
+
+					<a href="#">
+						<cms:text constant="menu_conference"/>
+					</a>
+
+					<a href="#">
+						<cms:text constant="menu_half_adds"/>
+					</a>
+
+				</nav>
+
+				<a href="url_Make('', 'home')" cms:eval="href" class="logo">
+					<img 
+						src="_BASEURL.'/site/images/logo_shifra.svg'" 
+						alt="logo"
+						cms:eval="src"
+						/>
+				</a>
+
+			</header>
 		</body>
 	</html>
 </document>
