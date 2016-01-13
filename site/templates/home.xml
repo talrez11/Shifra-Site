@@ -51,6 +51,48 @@
 				</a>
 
 			</header>
+
+			<section id="pirsom">
+				<h2><cms:text constant="menu_advertise"/></h2>
+				<br/>
+				
+				<div class="gallery_wrap">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="gallery_pirsom"
+						template="parts/pirsom_image.xml"
+						/>
+				</div>	
+			</section>
+
+			<section id="strip">
+				<h2><cms:text constant="menu_strip"/></h2>
+				<br/>
+				
+				<div class="gallery_wrap">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="gallery_strip"
+						template="parts/strip_image.xml"
+						/>
+				</div>	
+			</section>
+
+			<section id="conference">
+				<h2><cms:text constant="menu_conference"/></h2>
+				<br/>
+				
+				<div class="gallery_wrap">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="gallery_conference"
+						template="parts/pirsom_image.xml"
+						/>
+				</div>	
+			</section>
 		</body>
 	</html>
 </document>
