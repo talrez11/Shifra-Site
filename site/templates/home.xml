@@ -24,19 +24,19 @@
 				</a>
 
 				<nav>
-					<a href="#">
+					<a href="#pirsom">
 						<cms:text constant="menu_advertise"/>
 					</a>
 
-					<a href="#">
+					<a href="#strip">
 						<cms:text constant="menu_strip"/>
 					</a>
 
-					<a href="#">
+					<a href="#conference">
 						<cms:text constant="menu_conference"/>
 					</a>
 
-					<a href="#">
+					<a href="#half_ads">
 						<cms:text constant="menu_half_adds"/>
 					</a>
 
