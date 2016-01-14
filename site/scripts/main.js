@@ -52,6 +52,11 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
+	// lightbox for all images on page
+	if (!Site.is_mobile())
+		Site.lightbox = new LightBox('div.gallery_wrap a', false, false, true);
+
+
 	//Scroll Function
 	$('a[href*=#]').bind('click', function(e) {
 		e.preventDefault(); //prevent the "normal" behaviour which would be a "hard" jump

@@ -5,6 +5,7 @@
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<cms:collection include="animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -90,6 +91,20 @@
 						action="show_image_list"
 						group="gallery_conference"
 						template="parts/pirsom_image.xml"
+						/>
+				</div>	
+			</section>
+
+			<section id="half_ads">
+				<h2><cms:text constant="menu_half_adds"/></h2>
+				<br/>
+				
+				<div class="gallery_wrap">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="gallery_half"
+						template="parts/strip_image.xml"
 						/>
 				</div>	
 			</section>
