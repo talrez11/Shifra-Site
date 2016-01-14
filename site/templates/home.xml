@@ -10,6 +10,7 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<cms:svg file="site-sprite.svg"/>
 			<header>
 				<a
 					href="'tel:'.urlencode(Language::getText('phone'))"
@@ -48,6 +49,12 @@
 					<a href="#half_ads">
 						<cms:text constant="menu_half_adds"/>
 					</a>
+
+
+					<a href="#about">
+						<cms:text constant="menu_about"/>
+					</a>
+
 
 				</nav>
 
@@ -115,6 +122,18 @@
 						template="parts/strip_image.xml"
 						/>
 				</div>	
+			</section>
+
+			<section id="about">
+				<h2><cms:text constant="menu_about"/></h2>
+
+				<ul>
+					<cms:module
+						name="links"
+						action="show_link_list"
+						template="parts/contact_article.xml"
+						/>
+				</ul>
 			</section>
 		</body>
 	</html>

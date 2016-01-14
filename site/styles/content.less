@@ -6,6 +6,7 @@
  * Authors:Tal Reznic
  */
 
+section#about,
 section#half_ads, 
 section#conference,
 section#strip,
@@ -17,11 +18,16 @@ section#pirsom {
 	position: relative;
 }
 
+section#about,
 section#half_ads,
 section#conference,
 section#strip {
 	margin-top: 50px;
 	background-color: @color_ac_dark_grey;
+}
+
+section#about {
+	background-color: @color_ac_blue;
 }
 
 section#conference {
@@ -40,6 +46,11 @@ section#pirsom:before {
 	height: 0;
 	border-bottom: 50px solid @color_ac_dark_grey;
 	border-right: 50vw solid transparent;
+}
+
+section#half_ads:before {
+	border-bottom: 50px solid @color_ac_blue;
+	background-color: @color_ac_dark_grey;
 }
 
 section#strip:before {
@@ -61,11 +72,17 @@ section#pirsom:after {
 	border-left: 50vw solid transparent;
 }
 
+section#half_ads:after {
+	border-bottom: 50px solid @color_ac_blue;
+	background-color: @color_ac_dark_grey;
+}
+
 section#strip:after {
 	border-bottom: 50px solid @bg_color;
 	background-color: @color_ac_dark_grey;
 }
 
+section#about h2,
 section#half_ads h2,
 section#conference h2,
 section#strip h2,
@@ -74,11 +91,16 @@ section#pirsom h2 {
 	position: relative;
 }
 
+section#about h2 {
+	color: @color_ac_dark_grey;
+}
+
 section#half_ads h2,
 section#strip h2 {
 	color: @color_ac_white;
 }
 
+section#about h2:before,
 section#half_ads h2:before,
 section#conference h2:before,
 section#strip h2:before,
@@ -94,12 +116,18 @@ section#pirsom h2:before {
 	border-bottom: none;
 }
 
+section#about h2:before {
+	border-left: 2px solid @color_ac_dark_grey;
+	border-top: 2px solid @color_ac_dark_grey;
+}
+
 section#half_ads h2:before,
 section#strip h2:before {
 	border-left: 2px solid @color_ac_white;
 	border-top: 2px solid @color_ac_white;
 }
 
+section#about h2:after,
 section#half_ads h2:after,
 section#conference h2:after,
 section#strip h2:after,
@@ -112,6 +140,10 @@ section#pirsom h2:after {
 	border-left: none;
 	border-top: none;
 	border-right: none;
+	border-bottom: 2px solid @color_ac_dark_grey;
+}
+
+section#about h2:after {
 	border-bottom: 2px solid @color_ac_dark_grey;
 }
 
