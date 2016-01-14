@@ -14,11 +14,13 @@
  	width: 100%;
  	z-index: 10000;
 
- 	background-color: @color_ac_white;
- 	box-shadow: 0px 1px 10px fade(@color_ac_light_grey,70%);
+ 	background-color: darken(@bg_color,1%);
+ 	box-shadow: 0px 2px 10px fade(@color_ac_light_grey,70%);
+ 	border-bottom: 2px solid @color_ac_blue;
  	white-space: nowrap;
  }
 
+div#language,
 header a.phone,
 header nav,
 header a.logo {
@@ -26,16 +28,33 @@ header a.logo {
 	vertical-align: middle;
 }
 
+div#language {
+	padding-right: 20px;
+}
+
+div#language a {
+	padding-right: 5px;
+	padding-left: 5px;
+	text-decoration: none;
+	color: @color_ac_dark_grey;
+	transition: all 0.3s;
+}
+
+div#language a:hover {
+	text-decoration: underline;
+	color: darken(@color_ac_dark_grey,20%);
+}
+
+header a.logo {
+	width: 158px;
+	height: 100px;
+}
+
 header a.logo img {
 	vertical-align: middle;
 	display: block;
 	margin-right: auto;
-	width: 50%;
-}
-
-header nav {
-	padding-right: 20px;
-
+	width: 100%;
 }
 
 header nav a {

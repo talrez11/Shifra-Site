@@ -54,7 +54,10 @@ Site.on_load = function() {
 
 	// lightbox for all images on page
 	if (!Site.is_mobile())
-		Site.lightbox = new LightBox('div.gallery_wrap a', false, false, true);
+		Site.lightbox = new LightBox('section#pirsom a', false, false, true);
+		Site.lightbox = new LightBox('section#strip a', false, false, true);
+		Site.lightbox = new LightBox('section#conference a', false, false, true);
+		Site.lightbox = new LightBox('section#half_ads a', false, false, true);
 
 
 	//Scroll Function
@@ -64,7 +67,7 @@ Site.on_load = function() {
 		var target = $(this).attr("href"); //Get the target
 
 	// perform animated scrolling by getting top-position of target-element and set it as scroll target
-		$('html, body').stop().animate({ scrollTop: $(target).offset().top - 100 }, 1000, function() {
+		$('html, body').stop().animate({ scrollTop: $(target).offset().top - 170 }, 1000, function() {
 		     location.hash = target;  //attach the hash (#jumptarget) to the pageurl
 		});
 
