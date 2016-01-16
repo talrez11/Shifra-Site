@@ -11,15 +11,12 @@
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:svg file="site-sprite.svg"/>
-			<header>
-				<a
-					href="'tel:'.urlencode(Language::getText('phone'))"
-					cms:eval="href"
-					class="phone"
-					>
-					<cms:text constant="phone"/>
+			
+			<header >
+
+				<a href="url_Make('', 'home')" cms:eval="href" class="logo">
 					<img 
-						src="_BASEURL.'/site/images/icon-phone.svg'" 
+						src="_BASEURL.'/site/images/logo_shifra.svg'" 
 						alt="logo"
 						cms:eval="src"
 						/>
@@ -50,21 +47,28 @@
 						<cms:text constant="menu_half_adds"/>
 					</a>
 
+					<a href="#logo">
+						<cms:text constant="menu_logo"/>
+					</a>
 
 					<a href="#about">
 						<cms:text constant="menu_about"/>
 					</a>
-
-
 				</nav>
 
-				<a href="url_Make('', 'home')" cms:eval="href" class="logo">
+				<a
+					href="'tel:'.urlencode(Language::getText('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<cms:text constant="phone"/>
 					<img 
-						src="_BASEURL.'/site/images/logo_shifra.svg'" 
+						src="_BASEURL.'/site/images/icon-phone.svg'" 
 						alt="logo"
 						cms:eval="src"
 						/>
 				</a>
+
 
 			</header>
 
@@ -124,8 +128,28 @@
 				</div>	
 			</section>
 
+			<section id="logo">
+				<h2><cms:text constant="menu_logo"/></h2>
+
+				<div class="images_container">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="logos"
+						template="parts/logos_images.xml"
+						/>
+				</div>	
+			</section>
+
 			<section id="about">
 				<h2><cms:text constant="menu_about"/></h2>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about"
+					template="parts/about_article.xml"
+					/>
 
 				<ul>
 					<cms:module
@@ -134,6 +158,12 @@
 						template="parts/contact_article.xml"
 						/>
 				</ul>
+
+				<cms:module
+					name="downloads"
+					action="show_list"
+					template="parts/downloads.xml"
+					/>
 			</section>
 		</body>
 	</html>

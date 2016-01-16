@@ -1,0 +1,10 @@
+<document>
+	<a  class="cv" href="$params['url']" cms:eval="href">
+		<img 
+			src="_BASEURL.'/site/images/doc.svg'" 
+			alt="doc-icon"
+			cms:eval="src"
+			/>
+		<p><cms:var param="name" multilanguage="yes"/></p>	
+	</a>
+</document>

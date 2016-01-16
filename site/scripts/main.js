@@ -59,6 +59,17 @@ Site.on_load = function() {
 		Site.lightbox = new LightBox('section#conference a', false, false, true);
 		Site.lightbox = new LightBox('section#half_ads a', false, false, true);
 
+	// create slider for  logos gallery
+	 Site.client_logo_slider = new Caracal.Gallery.Slider();
+	 Site.client_logo_slider
+		.images.set_container('div.images_container')
+		.images.set_visible_count(4)
+		.images.set_step_size(1)
+		.images.set_center(true)
+		.images.add('div.images_container img')
+		.controls.set_auto(1000);
+	 Site.client_logo_slider.images.update()	
+
 
 	//Scroll Function
 	$('a[href*=#]').bind('click', function(e) {

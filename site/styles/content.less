@@ -6,28 +6,40 @@
  * Authors:Tal Reznic
  */
 
+section#logo,
 section#about,
 section#half_ads, 
 section#conference,
 section#strip,
 section#pirsom {
 	display: block;
-	text-align: right;
+	text-align: left;
 	margin-top: 106px;
 	padding:20px calc(~'(100vw - 1200px)' / 2);
 	position: relative;
 }
 
+body.rtl section#logo,
+body.rtl section#about,
+body.rtl section#half_ads, 
+body.rtl section#conference,
+body.rtl section#strip,
+body.rtl section#pirsom {
+	text-align: right;
+}
+
+section#logo,
 section#about,
 section#half_ads,
 section#conference,
 section#strip {
 	margin-top: 50px;
-	background-color: @color_ac_dark_grey;
+	background-color: @color_ac_blue;
 }
 
+section#logo,
 section#about {
-	background-color: @color_ac_blue;
+	background-color: @bg_color;
 }
 
 section#conference {
@@ -49,13 +61,19 @@ section#pirsom:before {
 }
 
 section#half_ads:before {
-	border-bottom: 50px solid @color_ac_blue;
-	background-color: @color_ac_dark_grey;
+	border-bottom: 50px solid @bg_color;
+	background-color: @color_ac_blue;
 }
 
 section#strip:before {
 	border-bottom: 50px solid @bg_color;
-	background-color: @color_ac_dark_grey;
+	background-color: @color_ac_blue;
+}
+
+section#conference:before,
+section#pirsom:before {
+	border-bottom: 50px solid @color_ac_blue;
+	background-color: @bg_color;
 }
 
 section#half_ads:after,
@@ -73,15 +91,22 @@ section#pirsom:after {
 }
 
 section#half_ads:after {
-	border-bottom: 50px solid @color_ac_blue;
-	background-color: @color_ac_dark_grey;
+	border-bottom: 50px solid @bg_color;
+	background-color: @color_ac_blue;
 }
 
 section#strip:after {
 	border-bottom: 50px solid @bg_color;
-	background-color: @color_ac_dark_grey;
+	background-color: @color_ac_blue;
 }
 
+section#conference:after,
+section#pirsom:after {
+	border-bottom: 50px solid @color_ac_blue;
+	background-color: @bg_color;
+}
+
+section#logo h2,
 section#about h2,
 section#half_ads h2,
 section#conference h2,
@@ -89,8 +114,10 @@ section#strip h2,
 section#pirsom h2 {
 	display: inline-block;
 	position: relative;
+	font-weight: 400;
 }
 
+section#logo,
 section#about h2 {
 	color: @color_ac_dark_grey;
 }
@@ -100,11 +127,12 @@ section#strip h2 {
 	color: @color_ac_white;
 }
 
-section#about h2:before,
-section#half_ads h2:before,
-section#conference h2:before,
-section#strip h2:before,
-section#pirsom h2:before {
+body.rtl section#logo h2:before,
+body.rtl section#about h2:before,
+body.rtl section#half_ads h2:before,
+body.rtl section#conference h2:before,
+body.rtl section#strip h2:before,
+body.rtl section#pirsom h2:before {
 	content: "";
 	position: absolute;
 	right: 70%;
@@ -116,22 +144,80 @@ section#pirsom h2:before {
 	border-bottom: none;
 }
 
-section#about h2:before {
+section#logo h2:before,
+section#about h2:before,
+section#half_ads h2:before,
+section#conference h2:before,
+section#strip h2:before,
+section#pirsom h2:before {
+	content: "";
+	position: absolute;
+	left: 70%;
+	width: 80px;
+	height: 100%;
+	border-right: 2px solid @color_ac_dark_grey;
+	border-top: 2px solid @color_ac_dark_grey;
+	border-left: none;
+	border-bottom: none;
+}
+
+section#conference h2:before,
+section#strip h2:before {
+	left: 90%;
+}
+
+body.rtl section#logo h2:before
+body.rtl section#about h2:before {
 	border-left: 2px solid @color_ac_dark_grey;
 	border-top: 2px solid @color_ac_dark_grey;
 }
 
-section#half_ads h2:before,
-section#strip h2:before {
+section#logo h2:before,
+section#about h2:before {
+	border-right: 2px solid @color_ac_dark_grey;
+	border-top: 2px solid @color_ac_dark_grey;
+}
+
+body.rtl section#half_ads h2:before,
+body.rtl section#strip h2:before {
 	border-left: 2px solid @color_ac_white;
 	border-top: 2px solid @color_ac_white;
 }
 
+section#half_ads h2:before,
+section#strip h2:before {
+	border-right: 2px solid @color_ac_white;
+	border-top: 2px solid @color_ac_white;
+}
+
+section#logo h2:after,
 section#about h2:after,
 section#half_ads h2:after,
 section#conference h2:after,
 section#strip h2:after,
 section#pirsom h2:after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: calc(~'(70% - 40px)');
+	width: calc(~'(80px + 40px)');
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	border-bottom: 2px solid @color_ac_dark_grey;
+}
+
+section#conference h2:after,
+section#strip h2:after {
+	left: calc(~'(90% - 40px)');
+}
+
+body.rtl section#logo h2:after,
+body.rtl section#about h2:after,
+body.rtl section#half_ads h2:after,
+body.rtl section#conference h2:after,
+body.rtl section#strip h2:after,
+body.rtl section#pirsom h2:after {
 	content: "";
 	position: absolute;
 	top: 100%;
@@ -143,8 +229,19 @@ section#pirsom h2:after {
 	border-bottom: 2px solid @color_ac_dark_grey;
 }
 
+body.rtl section#logo h2:after,
+body.rtl section#about h2:after {
+	border-bottom: 2px solid @color_ac_dark_grey;
+}
+
 section#about h2:after {
 	border-bottom: 2px solid @color_ac_dark_grey;
+}
+
+
+body.rtl section#half_ads h2:after,
+body.rtl section#strip h2:after {
+	border-bottom: 2px solid @color_ac_white;
 }
 
 section#half_ads h2:after,
@@ -201,7 +298,8 @@ section#pirsom div.gallery_wrap a:hover {
 
 section#half_ads div.gallery_wrap a:hover,
 section#strip div.gallery_wrap a:hover {
-	box-shadow: 0px 3px 15px fade(@color_ac_light_grey,30%);
+	border: 1px solid @color_ac_dark_grey;
+	box-shadow: 0px 3px 15px @color_ac_dark_grey;
 }
 
 section#half_ads div.gallery_wrap a:before,
@@ -221,4 +319,137 @@ section#strip div.gallery_wrap a img,
 section#pirsom div.gallery_wrap a img {
 	vertical-align: middle;
 	border: 1px solid @color_ac_light_grey;
+}
+
+section#half_ads div.gallery_wrap a img,
+section#strip div.gallery_wrap a img {
+	border: 1px solid @color_ac_dark_grey;
+}
+
+/*Feature section*/
+
+section#about article {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-bottom: 40px;
+	width: 750px;
+}
+
+section#about article p {
+	font-size: 1.3em;
+}
+
+section#about ul
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+section#about li {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+}
+
+section#about li a {
+	display: block;
+	text-decoration: none;
+	color: @color_ac_dark_grey;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+section#about li a:hover {
+	color: lighten(@color_ac_dark_grey,10%);
+}
+
+section#about li a:hover figure {
+	background-color: @color_ac_dark_grey;
+	border-radius: 0px;
+}
+
+section#about li a:hover svg {
+	fill: @color_ac_blue;
+}
+
+section#about li a figure {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	padding: 30px;
+	border: 2px solid @color_ac_dark_grey;
+	border-radius: 50%;
+	transition: all 0.3s;
+	
+}
+
+section#about li a figure svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30px;
+	height: 30px;
+	fill: @color_ac_dark_grey;
+}
+
+section#about > a {
+	display: block;
+	margin-top: 40px;
+	padding: 10px;
+	text-decoration: none;
+	color: @color_ac_dark_grey;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	border: 1px solid @color_ac_light_grey;
+	transition: all 0.3s;
+}
+
+section#about > a:hover {
+	box-shadow: 0px 3px 15px fade(@color_ac_light_grey,70%);
+}
+
+section#about > a img {
+	width: 60px;
+	height: 60px;
+}
+
+section#about > a h4 {
+	margin: 0px;
+}
+
+/*Logos Slider*/
+
+section#logo div.images_container {
+	display: block;
+	margin-top: 50px;
+	margin-right: 20px;
+	margin-left: 20px;
+	min-height: 135px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid @color_ac_light_grey;
+	background-color: white;
+}
+
+section#logo div.images_container img {
+	position: absolute;
+	top: 50%;
+	margin-top: -50.5px;
+	width: 200px;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+section#logo div.images_container img.visible {
+	opacity: 1;
+}
+
+section#logo div.images_container img.transit {
+	transition: none;
 }
