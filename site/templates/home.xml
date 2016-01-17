@@ -98,7 +98,11 @@
 						</a>
 					</div>
 					<nav class="mobile_menu">
-						
+						<cms:module
+							name="language_menu"
+							action="print"
+							/>
+
 						<a href="#pirsom">
 							<cms:text constant="menu_advertise"/>
 						</a>
