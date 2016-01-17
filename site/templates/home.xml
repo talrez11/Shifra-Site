@@ -11,66 +11,120 @@
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:svg file="site-sprite.svg"/>
-			
-			<header >
+			<!-- Desktop version -->
+			<cms:desktop>
+				<header >
 
-				<a href="url_Make('', 'home')" cms:eval="href" class="logo">
-					<img 
-						src="_BASEURL.'/site/images/logo_shifra.svg'" 
-						alt="logo"
-						cms:eval="src"
-						/>
-				</a>
-				
-				<div id="language">
-					<cms:module
-						name="language_menu"
-						action="print"
-						/>
-				</div>	
-
-				<nav>
-
-					<a href="#pirsom">
-						<cms:text constant="menu_advertise"/>
+					<a href="url_Make('', 'home')" cms:eval="href" class="logo">
+						<img 
+							src="_BASEURL.'/site/images/logo_shifra.svg'" 
+							alt="logo"
+							cms:eval="src"
+							/>
 					</a>
+					
+					<div id="language">
+						<cms:module
+							name="language_menu"
+							action="print"
+							/>
+					</div>	
 
-					<a href="#strip">
-						<cms:text constant="menu_strip"/>
+					<nav>
+
+						<a href="#pirsom">
+							<cms:text constant="menu_advertise"/>
+						</a>
+
+						<a href="#strip">
+							<cms:text constant="menu_strip"/>
+						</a>
+
+						<a href="#conference">
+							<cms:text constant="menu_conference"/>
+						</a>
+
+						<a href="#half_ads">
+							<cms:text constant="menu_half_adds"/>
+						</a>
+
+						<a href="#logo">
+							<cms:text constant="menu_logo"/>
+						</a>
+
+						<a href="#about">
+							<cms:text constant="menu_about"/>
+						</a>
+					</nav>
+
+					<a
+						href="'tel:'.urlencode(Language::getText('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="phone"/>
+						<img 
+							src="_BASEURL.'/site/images/icon-phone.svg'" 
+							alt="logo"
+							cms:eval="src"
+							/>
 					</a>
+				</header>
+			</cms:desktop>
+			<!-- Mobile header -->
+			<cms:mobile>
+				<header>
+					<div class="mobile_title">
+						<a href="javascript:void(0)" class="menu"></a>
 
-					<a href="#conference">
-						<cms:text constant="menu_conference"/>
-					</a>
+						<a href="url_Make('', 'home')" cms:eval="href" class="logo">
+							<img 
+								src="_BASEURL.'/site/images/logo_shifra.svg'" 
+								alt="logo"
+								cms:eval="src"
+								/>
+						</a>
 
-					<a href="#half_ads">
-						<cms:text constant="menu_half_adds"/>
-					</a>
+						<a
+							href="'tel:'.urlencode(Language::getText('phone'))"
+							cms:eval="href"
+							class="phone"
+							>
+							<img 
+								src="_BASEURL.'/site/images/icon-phone.svg'" 
+								alt="logo"
+								cms:eval="src"
+								/>
+						</a>
+					</div>
+					<nav class="mobile_menu">
+						
+						<a href="#pirsom">
+							<cms:text constant="menu_advertise"/>
+						</a>
 
-					<a href="#logo">
-						<cms:text constant="menu_logo"/>
-					</a>
+						<a href="#strip">
+							<cms:text constant="menu_strip"/>
+						</a>
 
-					<a href="#about">
-						<cms:text constant="menu_about"/>
-					</a>
-				</nav>
+						<a href="#conference">
+							<cms:text constant="menu_conference"/>
+						</a>
 
-				<a
-					href="'tel:'.urlencode(Language::getText('phone'))"
-					cms:eval="href"
-					class="phone"
-					>
-					<cms:text constant="phone"/>
-					<img 
-						src="_BASEURL.'/site/images/icon-phone.svg'" 
-						alt="logo"
-						cms:eval="src"
-						/>
-				</a>
+						<a href="#half_ads">
+							<cms:text constant="menu_half_adds"/>
+						</a>
 
+						<a href="#logo">
+							<cms:text constant="menu_logo"/>
+						</a>
 
-			</header>
+						<a href="#about">
+							<cms:text constant="menu_about"/>
+						</a>
+					</nav>
+				</header>
+			</cms:mobile>
 
 			<section id="pirsom">
 				<h2><cms:text constant="menu_advertise"/></h2>

@@ -1,0 +1,109 @@
+/**
+ * Header mobile Style Sheet
+ * Shifra-Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+header {
+ 	display: block;
+ 	text-align: center;
+ 	position: relative;
+ 	
+}
+
+.mobile_title {
+	background-color: @bg_color;
+}
+
+.mobile_title a.menu {
+	position: absolute;
+	top: 50%;
+	margin-top: -2.5px;
+	right: 5px;
+	width: 40px;
+	height: 5px;
+	background-color: @color_ac_dark_grey;
+	transition: all 0.3s;
+}
+
+.mobile_title.visible a.menu {
+	background-color: transparent;
+}
+
+.mobile_title a.menu:before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	right: 0px;
+	width: 40px;
+	height: 5px;
+	background-color: @color_ac_dark_grey;
+	transition: all 0.3s;
+}
+
+.mobile_title.visible a.menu:before {
+	top: 0px;
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	     -o-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+
+.mobile_title a.menu:after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	width: 40px;
+	height: 5px;
+	background-color: @color_ac_dark_grey;
+	transition: all 0.3s;
+}
+
+.mobile_title.visible a.menu:after {
+	top: 0px;
+	-webkit-transform: rotate(-5deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	     -o-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.mobile_title a.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	
+}
+
+.mobile_title a.logo img {
+	width: 100%;
+}
+
+.mobile_title a.phone {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	left: 5px;
+}
+
+.mobile_title a.phone img {
+	width: 40px;
+	height: 40px;
+}
+
+.mobile_menu {
+	text-align: left;
+}
+
+.mobile_menu a {
+	border-bottom: 1px solid @color_ac_blue;
+}
+
+body.rtl .mobile_menu {
+	text-align: right;
+}
