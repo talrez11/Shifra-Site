@@ -53,11 +53,12 @@ Site.on_load = function() {
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// lightbox for all images on page
-	if (!Site.is_mobile())
+	if (!Site.is_mobile()) {
 		Site.lightbox = new LightBox('section#pirsom a', false, false, true);
 		Site.lightbox = new LightBox('section#strip a', false, false, true);
 		Site.lightbox = new LightBox('section#conference a', false, false, true);
 		Site.lightbox = new LightBox('section#half_ads a', false, false, true);
+	}
 
 	// create slider for  logos gallery
 	 Site.client_logo_slider = new Caracal.Gallery.Slider();
@@ -69,6 +70,10 @@ Site.on_load = function() {
 		.images.add('div.images_container img')
 		.controls.set_auto(1000);
 	 Site.client_logo_slider.images.update()	
+
+	 if (Site.is_mobile()) {
+	 	Site.client_logo_slider.images.set_visible_count(2);
+	 }
 
 
 	//Scroll Function
