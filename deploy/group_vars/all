@@ -1,12 +1,12 @@
 ---
 site:
-  domain: way2cu.com
-  subdomain: shifra
+  domain: shifra.way2cu-usa1.com
+  #subdomain: shifra
   make_alias: false
-  root: shifra-site
-  username: "twigy"
+  root: httpdocs
+  username: "shifra"
   caracal_branch: develop
-  ip_address: 216.250.115.199
+  #ip_address: 0.0.0.0
   # owner: Some Person
   # plan: Unlimited
   # database_type: 'mysql'
