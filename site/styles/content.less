@@ -15,7 +15,7 @@ section#pirsom {
 	display: block;
 	text-align: left;
 	margin-top: 106px;
-	padding:20px calc(~'(100vw - 1200px)' / 2);
+	padding: 20px calc(~'(100vw - 1200px)' / 2);
 	position: relative;
 }
 
@@ -238,7 +238,6 @@ section#about h2:after {
 	border-bottom: 2px solid @color_ac_dark_grey;
 }
 
-
 body.rtl section#half_ads h2:after,
 body.rtl section#strip h2:after {
 	border-bottom: 2px solid @color_ac_white;
@@ -267,9 +266,8 @@ section#pirsom div.gallery_wrap a {
 	margin-top: 20px;
 	width: 330px;
 	height: 425px;
+
 	border: 1px solid transparent;
-	position: relative;
-	top: 0px;
 	transition: all 0.3s;
 }
 
@@ -291,15 +289,10 @@ section#half_ads div.gallery_wrap a:hover,
 section#conference div.gallery_wrap a:hover,
 section#strip div.gallery_wrap a:hover,
 section#pirsom div.gallery_wrap a:hover {
-	top: -5px;
-	box-shadow: 0px 3px 15px fade(@color_ac_light_grey,70%);
 	border: 1px solid @color_ac_light_grey;
-}
-
-section#half_ads div.gallery_wrap a:hover,
-section#strip div.gallery_wrap a:hover {
-	border: 1px solid @color_ac_dark_grey;
-	box-shadow: 0px 3px 15px @color_ac_dark_grey;
+	background-color: white;
+	box-shadow: 0px 3px 15px fade(@color_ac_light_grey,70%);
+	transform: scale(1.05);
 }
 
 section#half_ads div.gallery_wrap a:before,
